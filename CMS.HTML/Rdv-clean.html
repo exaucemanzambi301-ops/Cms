@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre Rendez-vous</title>
+    <link rel="stylesheet" href="assets/css/Rdv.css">
+</head>
+<body>
+    <main class="page-wrapper">
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Prendre un rendez-vous</h1>
+                <p>Remplissez vos informations puis confirmez votre réservation.</p>
+                <div class="buttons-row">
+                    <a class="btn secondary" href="login.html">Identification</a>
+                    <a class="btn" href="index.html">Retour à l'accueil</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-card">
+                <h2>Formulaire de rendez-vous</h2>
+                <p id="authMessage" class="form-message"></p>
+                <form id="rdvForm">
+                    <div class="grid-row">
+                        <label for="nom">Nom</label>
+                        <input id="nom" name="nom" type="text" placeholder="Entrer votre nom" required>
+                    </div>
+                    <div class="grid-row">
+                        <label for="postnom">Post-nom</label>
+                        <input id="postnom" name="postnom" type="text" placeholder="Entrer votre post-nom" required>
+                    </div>
+                    <div class="grid-row">
+                        <label for="telephone">Téléphone</label>
+                        <input id="telephone" name="telephone" type="tel" placeholder="Entrer votre numéro" required>
+                    </div>
+                    <div class="grid-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Entrer votre email" required>
+                    </div>
+                    <div class="grid-row">
+                        <label for="date">Date</label>
+                        <input id="date" name="date" type="date" required>
+                    </div>
+                    <div class="grid-row">
+                        <label for="heure">Heure</label>
+                        <input id="heure" name="heure" type="time" required>
+                    </div>
+                    <div class="grid-row">
+                        <label for="numero_dossier">Numéro de dossier</label>
+                        <input id="numero_dossier" name="numero_dossier" type="text" placeholder="Numéro de dossier médical" required>
+                    </div>
+                    <div class="grid-row">
+                        <label for="type_consultation">Type de consultation</label>
+                        <select id="type_consultation" name="type_consultation" required>
+                            <option disabled selected value="">Choisir une consultation</option>
+                            <option value="Consultation Générale">Consultation Générale</option>
+                            <option value="Cardiologie">Cardiologie</option>
+                            <option value="Dermatologie">Dermatologie</option>
+                            <option value="Orthopédie">Orthopédie</option>
+                            <option value="Pédiatrie">Pédiatrie</option>
+                            <option value="Imagerie Médicale">Imagerie Médicale</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn primary">Enregistrer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/cms.js"></script>
+</body>
+</html>

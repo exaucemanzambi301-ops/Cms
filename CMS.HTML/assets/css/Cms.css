@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* NAVIGATION */
+.nav {
+    background-color: #1a73e8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    background-color: green;
+    border-radius: 50px;
+    border: none;
+}
+
+.nav a.btn {
+    color: black;
+    border-radius: 50px;
+    margin: 10px 10px;
+}
+
+.nav a.btn:hover {
+    background-color: green;
+}
+
+/* HERO SECTION */
+.hero-content {
+    background: green;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: green;
+    transform: scale(1.05);
+}
+
+/* SERVICES */
+.services {
+    padding: 60px 20px;
+    background-color: rgb(183, 189, 183);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: green;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f8f6 100%);
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: green;
+    margin-bottom: 15px;
+}
+
+/* URGENCES */
+.urgences {
+    background-color: #ffebee;
+    padding: 40px 20px;
+    text-align: center;
+    border-left: 5px solid #d32f2f;
+}
+
+.urgences h2 {
+    color: green;
+    margin-bottom: 20px;
+}
+
+.urgences-info h3 {
+    color: green;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* MÉDECINS */
+.medecins {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.medecins h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: green;
+}
+
+.medecins-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.medecin-card {
+    background-color: #f0f7ff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid green;
+}
+
+.medecin-card h3 {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.medecin-card .specialite {
+    color: #8a0f0f;
+    font-style: italic;
+    margin-top: 10px;
+}
+.medecin-card .infimière {
+    font-style: italic;
+    margin-top: 10px;
+    color: #8a0f0f;
+}
+
+/* CONTACTS */
+.contacts {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contacts h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: green;
+}
+
+.contacts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: left;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+    color: green;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+    color: green;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+}
+
+.contact-form .btn {
+    background-color: green;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+    background-color: #1a73e8;
+
+}
+
+/* FOOTER */
+.footer {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .contacts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav ul {
+        flex-direction: column;
+    }
+}

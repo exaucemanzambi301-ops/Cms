@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #eef6ff 0%, #ffffff 100%);
+    color: #24303f;
+}
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+.hero {
+    background: linear-gradient(135deg, #1a73e8, #3a99ff);
+    color: white;
+    border-radius: 24px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(26, 115, 232, 0.18);
+}
+.hero-inner {
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+}
+.hero-inner h1 {
+    margin: 0 0 14px;
+    font-size: 36px;
+    text-align: center;
+}
+.hero-inner p {
+    margin: 0 0 24px;
+    font-size: 18px;
+    max-width: 720px;
+    line-height: 1.6;
+    text-align: center;
+}
+.buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.btn.primary {
+    background: #0b5ed7;
+}
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.form-section {
+    display: flex;
+    justify-content: center;
+}
+.form-card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 22px;
+    padding: 36px;
+    box-shadow: 0 18px 40px rgba(11, 70, 129, 0.08);
+}
+.form-card h2 {
+    margin-top: 0;
+    color: #122034;
+}
+.form-card p {
+    color: #4b5863;
+}
+.grid-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.grid-row label {
+    font-weight: bold;
+    color: #374553;
+}
+.grid-row input,
+.grid-row select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #c4d2e1;
+    border-radius: 14px;
+    font-size: 15px;
+    color: #1f3243;
+}
+.grid-row input:focus,
+.grid-row select:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.12);
+}
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    background: #1a73e8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+button:hover {
+    background: #1455b8;
+    transform: translateY(-2px);
+}
+.form-message {
+    margin-bottom: 20px;
+    color: #1a7f0f;
+    font-weight: bold;
+}
+@media (max-width: 720px) {
+    .hero-inner h1 {
+        font-size: 28px;
+    }
+    .form-card {
+        padding: 28px;
+    }
+}

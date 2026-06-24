@@ -1,0 +1,2 @@
+Patching multiple service pages: add Service.css, replace header with site header + hero, replace .btn classes with .card-btn.
+This is a temporary note.

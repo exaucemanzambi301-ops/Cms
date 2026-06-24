@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identification - Centre Médical</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <main class="page-center">
+        <section class="card">
+            <h1>Identification patient</h1>
+            <p>Enregistrez vos informations pour continuer vers la prise de rendez-vous.</p>
+
+            <form id="loginForm">
+                <div class="field-row">
+                    <label for="loginNom">Nom</label>
+                    <input id="loginNom" name="nom" type="text" placeholder="Entrer votre nom" required>
+                </div>
+                <div class="field-row">
+                    <label for="loginPostnom">Post-nom</label>
+                    <input id="loginPostnom" name="postnom" type="text" placeholder="Entrer votre post-nom" required>
+                </div>
+                <div class="field-row">
+                    <label for="loginEmail">Email</label>
+                    <input id="loginEmail" name="email" type="email" placeholder="Entrer votre email" required>
+                </div>
+                <div class="field-row">
+                    <label for="loginTelephone">Téléphone</label>
+                    <input id="loginTelephone" name="telephone" type="tel" placeholder="Entrer votre numéro" required>
+                </div>
+                <button type="submit">Enregistrer et ouvrir RDV</button>
+            </form>
+
+            <p class="note">Vos données sont sauvegardées localement dans le navigateur.</p>
+            <p id="loginMessage" class="form-message"></p>
+        </section>
+    </main>
+    <script src="assets/js/cms.js"></script>
+</body>
+</html>

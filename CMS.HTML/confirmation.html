@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation RDV</title>
+    <link rel="stylesheet" href="assets/css/confirmation.css">
+</head>
+<body>
+    <main class="page-center">
+        <section class="card">
+            <h1>Confirmation du rendez-vous</h1>
+            <p id="confirmationMessage">Chargement des informations...</p>
+            <div id="summaryDetails" class="summary-details"></div>
+            <div class="actions">
+                <a class="button" href="Rdv.html">Modifier le rendez-vous</a>
+                <a class="button secondary" href="login.html">Nouvelle identification</a>
+                <button id="saveProfileBtn" class="button primary">Enregistrer le profil</button>
+            </div>
+            <p id="saveStatus" class="save-status" aria-live="polite"></p>
+        </section>
+    </main>
+    <script src="assets/js/directory.js"></script>
+    <script src="assets/js/cms.js"></script>
+</body>
+</html>

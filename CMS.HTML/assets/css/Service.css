@@ -1,0 +1,90 @@
+:root{
+    --primary:#1a73e8;
+    --green-600:#2e7d32;
+    --green-500:#4caf50;
+    --green-300:#81c784;
+    --muted:#6b8a6b;
+    --bg:#f7fbf8;
+    --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg,var(--bg),#ffffff);
+    color:#16381f;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+.site-header{background:transparent;padding:18px 0}
+.site-header .brand{font-size:20px;color:var(--green-600);margin:0;display:inline-block}
+.nav{float:right}
+.nav-link{margin-left:18px;text-decoration:none;color:var(--primary)}
+.nav-link.primary-cta{background:var(--green-500);color:#fff;padding:8px 12px;border-radius:6px}
+
+.hero{padding:36px 0}
+.hero .hero-content{text-align:center;padding:18px}
+.hero h2{font-size:32px;margin:6px 0;color:var(--green-600)}
+.lead{font-size:18px;color:var(--muted);margin-bottom:6px}
+.muted{color:#5a6b5a;font-size:14px}
+.card-btn{
+    display:inline-block;padding:8px 12px;background:var(--primary);color:#fff;border-radius:6px;text-decoration:none;font-weight:600}
+.card-btn:hover{opacity:0.95}
+
+.badge{display:inline-block;background:rgba(76,175,80,0.12);color:var(--green-600);padding:6px 8px;border-radius:6px;font-size:13px;margin-right:8px}
+
+.small{font-size:13px;color:var(--muted)}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin: 24px 0 60px 0;
+    padding: 24px;
+}
+
+.service-card {
+    background: var(--card);
+    border: 1px solid rgba(76,175,80,0.12);
+    border-radius: 12px;
+    padding: 22px;
+    text-align: left;
+    transition: all 0.28s ease;
+    box-shadow: 0 6px 14px rgba(42, 122, 48, 0.06);
+    position: relative;
+    display:flex;flex-direction:column;justify-content:space-between
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;left:0;top:0;height:6px;width:100%;background:linear-gradient(90deg,var(--green-500),var(--green-300));border-top-left-radius:12px;border-top-right-radius:12px
+}
+
+.service-card:hover {transform:translateY(-6px);box-shadow:0 10px 26px rgba(42,122,48,0.12)}
+
+.service-card h3{font-size:18px;margin:0 0 10px;color:var(--green-600);font-weight:700}
+
+/* Link wrapper for service cards */
+.service-link{display:block;text-decoration:none;color:inherit;border-radius:12px}
+.service-link:focus{outline:3px solid rgba(26,115,232,0.14)}
+
+.service-card p{
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.5;
+    margin:8px 0
+}
+
+.card-actions{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:14px
+}
+
+.card-btn.secondary{
+    background:transparent;
+    color:var(--green-600);
+    border:1px solid rgba(76,175,80,0.12);
+    padding:8px 12px;
+    border-radius:6px;
+}

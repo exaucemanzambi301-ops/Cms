@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profils enregistrés</title>
+    <link rel="stylesheet" href="assets/css/Rdv.css">
+    <link rel="stylesheet" href="assets/css/profiles.css">
+</head>
+<body>
+    <main class="page-wrapper">
+        <section class="profiles-hero">
+            <div class="profiles-header">
+                <div>
+                    <h1>Profils enregistrés</h1>
+                    <p>Retrouvez ici les patients déjà identifiés et chargez-les rapidement dans le formulaire RDV.</p>
+                </div>
+                <div>
+                    <a class="btn secondary" href="Rdv.html">Retour au formulaire</a>
+                    <a class="btn" href="index.html">Accueil</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="profilesSection">
+            <div class="empty-state" id="emptyState">Chargement des profils...</div>
+        </section>
+        <div class="profile-footer">
+            <p id="profilesStatus" class="profiles-status"></p>
+        </div>
+    </main>
+
+    <script src="assets/js/directory.js"></script>
+    <script>
+        async function renderProfiles() {
+            if (!window.Directory) return;
+            await window.Directory.init();
+            const profiles = await window.Directory.getAllPatients();
+            const section = document.getElementById('profilesSection');
+            section.innerHTML = '';
+            if (!profiles.length) {
+                section.innerHTML = '<div class="empty-state">Aucun profil enregistré. Utilisez l’identification sur la page de rendez-vous pour en créer.</div>';
+                const loadSamplesButton = document.createElement('button');
+                loadSamplesButton.textContent = 'Charger des exemples';
+                loadSamplesButton.className = 'btn primary';
+                loadSamplesButton.addEventListener('click', async function () {
+                    await window.Directory.addSamplePatients();
+                    renderProfiles();
+                });
+                const footer = document.createElement('div');
+                footer.style.marginTop = '18px';
+                footer.appendChild(loadSamplesButton);
+                section.appendChild(footer);
+                return;
+            }
+            const list = document.createElement('div');
+            list.className = 'profiles-list';
+            profiles.forEach(profile => {
+                const card = document.createElement('div');
+                card.className = 'profile-card';
+                card.innerHTML = `
+                    <h2>${profile.nom || ''} ${profile.postnom || ''}</h2>
+                    <p><strong>Dossier :</strong> ${profile.numero_dossier || '-'}</p>
+                    <p><strong>Email :</strong> ${profile.email || '-'}</p>
+                    <p><strong>Téléphone :</strong> ${profile.telephone || '-'}</p>
+                    <div class="profile-actions">
+                        <a class="primary" href="Rdv.html" data-dossier="${profile.numero_dossier}">Charger</a>
+                        <a class="secondary" href="login.html">Modifier</a>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+            section.appendChild(list);
+            document.querySelectorAll('.profile-actions a.primary').forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const dossier = this.dataset.dossier;
+                    localStorage.setItem('selectedProfileDossier', dossier);
+                    window.location.href = 'Rdv.html';
+                });
+            });
+        }
+        renderProfiles();
+    </script>
+</body>
+</html>
